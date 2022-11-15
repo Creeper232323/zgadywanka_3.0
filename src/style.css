@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgb(7, 219, 134), rgb(11, 241, 225));
+  font-family: "Lato", sans-serif;
+}
+#all {
+  width: 70vw;
+  height: 50vh;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding: 30px;
+}
+h1 {
+  font-size: 20px;
+}
