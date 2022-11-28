@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>zgadywanka 3.0</title>
     <link rel="stylesheet" href="src/style.css" />
-    <script src="src/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +15,25 @@
   </head>
   <body>
     <div id="all">
-      <h1>Zgadnij liczbę od 1 do 100</h1>
-      <input type="text" id="txt" />
-      <button id="btn" class="bt">OK</button>
-      <button class="bt" id="res">RESET</button>
-      <p class="txt" id="kom"></p>
-      <p class="txt" id="ws"></p>
+      <div id="top">
+        <h1>Zgadnij liczbę od 1 do 100</h1>
+        <input type="number" id="txt" class="tet" min="0" max="100  " />
+        <button id="btn" class="bt">OK</button>
+        <button class="bt" id="res">RESET</button>
+      </div>
+      <div id="bottom">
+        <p class="txt" id="kom">zacznij grać aby zobaczyć różne komunikaty!</p>
+        <p class="txt" id="ws">zacznij grać aby zobaczyć wskazówki!</p>
+      </div>
+      <form id="form">
+        <label for="userName">Nazwa konta</label><br />
+        <input id="userName" type="text" class="tet" required /><br /><br />
+        <label for="pasword">Hasło</label><br />
+        <input type="text" id="userpasword" class="tet" required />
+        <br />
+        <button id="sumbit" class="bt">zatwierdź</button>
+      </form>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
