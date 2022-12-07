@@ -10,7 +10,7 @@ body {
 }
 #all {
   width: 70vw;
-  height: 50vh;
+  height: 60vh;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
@@ -34,6 +34,7 @@ h1 {
 }
 #top {
   text-align: center;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px dashed rgb(177, 173, 173);
 }
@@ -59,6 +60,56 @@ h1 {
   }
 }
 
-#form {
+#form,
+#actd,
+#log {
   display: none;
+}
+
+#im {
+  width: 30px;
+  height: 30px;
+}
+#act {
+  display: flex;
+  justify-content: end;
+}
+#act span {
+  width: 100px;
+}
+#act button {
+  border: none;
+  background: none;
+  display: flex;
+}
+.btna {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+#box-with-arrow {
+  border: 2px solid red;
+  border-radius: 5%;
+  text-align: center;
+  padding: 5px;
+  margin: 25px auto;
+  width: 100px;
+  position: relative;
+  display: none;
+}
+#box-with-arrow::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 30px solid #f34a53;
+  margin: 30px auto 0;
+  transform: rotate(90deg);
+  bottom: -27px;
+  right: 10px;
 }

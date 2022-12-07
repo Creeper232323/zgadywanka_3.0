@@ -1,3 +1,4 @@
+let czyZalogowany = false;
 //*zmienne
 let number;
 //* jądro
@@ -16,12 +17,26 @@ document.addEventListener("keyup", (e) => {
     akcept();
   }
 });
+document.querySelector("#txt").addEventListener("input", () => {
+  const lic = document.querySelector("#txt").value;
+  if (lic > 100) {
+    document.querySelector("#ws").textContent = "liczba jest poza zakresem!";
+    document.querySelector("#box-with-arrow").style.display = "block";
+  } else if (lic < 100) {
+    if (lic < 0) {
+      document.querySelector("#ws").textContent = "liczba jest poza zakresem!";
+      document.querySelector("#box-with-arrow").style.display = "block";
+    } else {
+      document.querySelector("#ws").textContent = "graj dalej!";
+      document.querySelector("#box-with-arrow").style.display = "none";
+    }
+  }
+});
 //* funkcja akceptowania
 function akcept() {
   const strzal = document.querySelector("#txt").value;
   console.log(strzal);
   document.querySelector("#txt").value = "";
-  //* sprawdzanie czy liczba jest
   //* sprawdzanie liczby
   if (strzal == number) {
     document.querySelector("#kom").textContent = "gratulacje zgadłeś!";
@@ -45,4 +60,3 @@ document.querySelector("#res").addEventListener("click", () => {
   document.querySelector("#kom").textContent = "";
   document.querySelector("#ws").textContent = "";
 });
-chack;

@@ -16,15 +16,24 @@
   <body>
     <div id="all">
       <div id="top">
+        <div id="act">
+          <button id="actb">
+            <span>nie jesteś zalogowany</span>
+            <img src="src/images/iconmonstr-user-19-240.png" alt="" id="im" />
+          </button>
+        </div>
         <h1>Zgadnij liczbę od 1 do 100</h1>
+          <div id="box-with-arrow">liczba jest niepoprawna!</div>
         <input type="number" id="txt" class="tet" min="0" max="100  " />
         <button id="btn" class="bt">OK</button>
         <button class="bt" id="res">RESET</button>
       </div>
+      <! – miejsce na główny display –>
       <div id="bottom">
         <p class="txt" id="kom">zacznij grać aby zobaczyć różne komunikaty!</p>
         <p class="txt" id="ws">zacznij grać aby zobaczyć wskazówki!</p>
       </div>
+      <! – oraz na formularz tworzenia konta –>
       <form id="form">
         <label for="userName">Nazwa konta</label><br />
         <input id="userName" type="text" class="tet" required /><br /><br />
@@ -33,6 +42,24 @@
         <br />
         <button id="sumbit" class="bt">zatwierdź</button>
       </form>
+      <!– miejsce na konto–>
+      <div id="actd">
+        <h2 id="name"></h2>
+        <span id="wins"></span>
+        <br />
+        <button class="btna" id="login">Zaloguj się</button>
+        <br />
+        <button class="btna" id="create">stwórz konto</button>
+        <br />
+      </div>
+      <! –dla logowania–>
+      <form id="log">
+        <label for="userName">Nazwa konta</label><br />
+        <input id="userNameforLogin" type="text" class="tet" required /><br /><br />
+        <label for="pasword">Hasło</label><br />
+        <input type="text" id="userpaswordforLogin" class="tet" required />
+        <br />
+        <button id="ok" class="bt">zatwierdź</button>
     </div>
     <script src="src/app.js"></script>
   </body>
